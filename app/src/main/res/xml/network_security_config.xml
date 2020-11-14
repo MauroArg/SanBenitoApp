@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">farmaciasanbenitoapp.com</domain>
+        <domain includeSubdomains="true">165.227.12.178</domain>
+        <domain includeSubdomains="true">157.230.135.154</domain>
+       <!-- <domain includeSubdomains="true">portaldgii.mh.gob.sv</domain>-->
+    </domain-config>
+</network-security-config>

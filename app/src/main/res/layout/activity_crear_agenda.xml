@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.CrearAgendaActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.FullScreen.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.FullScreen.PopupOverlay" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/logo" />
+
+        <EditText
+            android:id="@+id/txtMedicinas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/background_edit_transparent"
+            android:hint="Escriba su medicamento"
+            android:singleLine="true"
+            android:lines="1"
+            android:padding="6dp" />
+
+        <EditText
+            android:id="@+id/textDosis"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/background_edit_transparent"
+            android:gravity="top|left"
+            android:hint="Dosis diaria"
+            android:inputType="textMultiLine"
+            android:padding="6dp"
+            android:scrollHorizontally="false" />
+
+        <EditText
+            android:id="@+id/etxt_fromdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/background_edit_transparent"
+            android:editable="false"
+            android:hint="Fecha de aplicación"
+            android:padding="6dp" />
+
+        <Button
+            android:id="@+id/btnGuardarAgenda"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Guardar"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/medicinasLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:elevation="5dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_agenda_card"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaAgendaMed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/imgEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/empty_box"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"
+            android:layout_marginBottom="100dp"
+            android:alpha="0.5"/>
+
+        <TextView
+            android:id="@+id/txtEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="45dp"
+            android:text="No se encuentran productos :("
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:visibility="gone"
+            android:textSize="20sp"
+            android:alpha="0.5"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

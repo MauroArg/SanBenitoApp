@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "874039621812",
+    "firebase_url": "https://san-benito-233415.firebaseio.com",
+    "project_id": "san-benito-233415",
+    "storage_bucket": "san-benito-233415.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874039621812:android:6421c8a8ae4d9197",
+        "android_client_info": {
+          "package_name": "com.app.sanbenitoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874039621812-0iken2g8rd2q3cdpr091djrf4ma3o842.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8OjiEcYjvpa83EL4L3-l9eraTJEhEytM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

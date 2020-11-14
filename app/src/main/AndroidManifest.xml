@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.sanbenitoapp">
+    <!-- Permisos -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="imoves.com.mred.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Features -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- Cloud to Device Messaging -->
+    <permission
+        android:name="com.app.sanbenitoapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.ChangepassActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".Activity.ConfActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.EmailPassRecoveryActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.CrearAgendaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.EstadoPedidoActivity" />
+        <activity android:name=".Activity.MapsActivity" />
+        <activity
+            android:name=".Activity.PerfilSucursalActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.ContactanosActivity"
+            android:label="Contactanos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.ChatActivity"
+            android:label="Chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.PerfilActivity"
+            android:label="Perfil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.AgendaActivity"
+            android:label="Agenda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.CarritoActivity"
+            android:label="Carrito"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.PromocionActivity"
+            android:label="Promociones"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.SucursalActivity"
+            android:label="Sucursales"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.ProductoActivity"
+            android:label="@string/title_activity_producto"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.RegistroActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="¡Bienvenido!" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

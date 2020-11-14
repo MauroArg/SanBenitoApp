@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".Activity.EmailPassRecoveryActivity"
+    tools:ignore="VectorDrawableCompat">
+
+    <!--Imagen superior-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/up"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginEnd="80dp"
+        app:srcCompat="@mipmap/logo"/>
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/imageView2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/browser_actions_bg_grey"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <EditText
+                        android:id="@+id/txtEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="Correo de Recuperacion"
+                        android:inputType="textEmailAddress"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Ingrese su correo para enviar su codigo de recuperacion"
+                        android:textColor="#999999"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv"
+                android:layout_alignLeft="@+id/cv"
+                android:layout_alignRight="@+id/cv"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginRight="35dp"
+                android:elevation="10dp">
+
+                <Button
+                    android:layout_marginTop="45dp"
+                    android:id="@+id/btBackup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="Enviar"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/cv"
+                android:layout_alignRight="@+id/cv"
+                android:layout_marginTop="-20dp"
+                android:layout_marginRight="-20dp"
+                android:elevation="10dp">
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!--Imagen inferior-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:scaleType="fitEnd"
+        android:src="@mipmap/down" />
+
+</RelativeLayout>

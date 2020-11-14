@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="20dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="6dp"
+    card_view:cardMaxElevation="6dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@mipmap/img"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img"
+            android:textColor="@color/colorPrimary"
+            android:text="Colonia Medica"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:lines="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/telefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4b4a4a"
+            android:text="Telefono: 22222222"
+            android:layout_toRightOf="@+id/img"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="5dp"
+            android:textSize="13sp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/direccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img"
+            android:layout_below="@+id/telefono"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:lines="2"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:text="colonia mercedes algo mas de descripcion"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

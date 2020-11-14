@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    tools:context="com.app.sanbenitoapp.Activity.PerfilSucursalActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        numberpicker:layout_constraintEnd_toEndOf="parent"
+        numberpicker:layout_constraintStart_toStartOf="parent"
+        numberpicker:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgProd"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/nombreProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="Palitroques"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/precioProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:text="$2.50"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descripcionProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="trozos de nose que"
+            android:textColor="#818080" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Comentario extra" />
+
+        <EditText
+            android:id="@+id/editComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escriba un comentario extra"
+            android:lines="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Cantidad:"
+            android:textColor="#818080" />
+
+        <com.travijuu.numberpicker.library.NumberPicker
+            android:id="@+id/pickerCantidad"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            numberpicker:custom_layout="@layout/picker_number_layout"
+            numberpicker:focusable="false"
+            numberpicker:max="10"
+            numberpicker:min="1">
+
+        </com.travijuu.numberpicker.library.NumberPicker>
+
+        <Button
+            android:id="@+id/Agregar"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Agregar a la orden"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

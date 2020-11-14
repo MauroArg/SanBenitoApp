@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.EstadoPedidoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/titupedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tu pedido ha sido procesado!"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:layout_marginTop="20dp"
+            android:text="Se va a enviar tu pedido a la ubicación que seleccionó previamente"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Numero de Pedido:"/>
+
+        <TextView
+            android:id="@+id/pedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SB582-23"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Tiempo estimado:"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="20:45 Min"
+            android:background="@drawable/background_edit_white"
+            android:textColor="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btUpdate"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:background="#53bed9"
+            android:text="Actualizar"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
